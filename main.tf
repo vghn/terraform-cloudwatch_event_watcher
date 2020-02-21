@@ -1,3 +1,7 @@
+terraform {
+  required_version = ">= 0.12"
+}
+
 # Lambda execution role
 resource "aws_iam_role" "lambda" {
   name               = "cloudwatch-event-watcher"
@@ -64,7 +68,6 @@ resource "aws_lambda_function" "lambda" {
   handler          = "main.handler"
   memory_size      = 128
   role             = aws_iam_role.lambda.arn
-  runtime          = "python3.8"
+  runtime          = "python3.7"
   source_code_hash = filebase64sha256(data.archive_file.lambda.output_path)
 }
-
