@@ -1,1 +1,3 @@
-# terraform-cloudwatch_event_watcher
+# Cloudwatch Event Watcher
+
+This module provisions AWS alerts for specific Cloudwatch events.
