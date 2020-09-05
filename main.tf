@@ -1,7 +1,3 @@
-terraform {
-  required_version = ">= 0.12"
-}
-
 # Lambda execution role
 resource "aws_iam_role" "lambda" {
   name               = "cloudwatch-event-watcher"
